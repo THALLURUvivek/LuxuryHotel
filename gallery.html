@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Paradise Cove Resort</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+            NAVBAR
+    ========================== -->
+
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+
+        <div class="container">
+
+            <a class="navbar-brand logo-text"
+                href="index.html">
+             <img src="images/image.png" alt="Paradise Cove Resort">
+            </a>
+
+            <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+                id="navbarContent">
+
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="resorts.html">Resorts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="amenities.html">Amenities</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="gallery.html">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="contact.html">Contact</a>
+                    </li>
+
+                </ul>
+
+                <div class="nav-buttons">
+
+                    <a href="signin.html"
+                        class="btn btn-outline-light me-2">
+                        Sign In
+                    </a>
+
+                    <a href="booking.html"
+                        class="btn book-btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ==========================
+            HERO SECTION
+    ========================== -->
+
+    <section class="gallery-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container">
+
+            <div class="row min-vh-100 align-items-center">
+
+                <div class="col-lg-8">
+
+                    <div class="hero-content">
+
+                        <span>PARADISE MOMENTS</span>
+
+                        <h1>
+                            Explore Our Luxury
+                            Resort Gallery
+                        </h1>
+
+                        <p>
+                            Discover breathtaking ocean views,
+                            luxury accommodations, world-class
+                            amenities, and unforgettable guest
+                            experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+            GALLERY INTRO
+    ========================== -->
+
+    <section class="gallery-intro">
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <span class="section-tag">
+                    VISUAL JOURNEY
+                </span>
+
+                <h2 class="section-title">
+                    Discover Paradise Through Images
+                </h2>
+
+                <p class="gallery-description">
+
+                    Explore our collection of stunning
+                    photographs showcasing luxury villas,
+                    pristine beaches, infinity pools,
+                    fine dining, and unforgettable
+                    resort experiences.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+            FEATURED GALLERY
+    ========================== -->
+
+    <section class="featured-gallery">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="gallery-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop"
+                            alt="Beach View"
+                            class="img-fluid">
+
+                        <div class="gallery-overlay">
+
+                            <h5>Private Beach</h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="gallery-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1200&auto=format&fit=crop"
+                            alt="Infinity Pool"
+                            class="img-fluid">
+
+                        <div class="gallery-overlay">
+
+                            <h5>Infinity Pool</h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="gallery-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+                            alt="Luxury Villa"
+                            class="img-fluid">
+
+                        <div class="gallery-overlay">
+
+                            <h5>Luxury Villas</h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Resort Experiences Starts In Part 2 -->
+     <!-- ==========================
+        MASONRY GALLERY
+========================== -->
+
+<section class="masonry-gallery">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                RESORT HIGHLIGHTS
+            </span>
+
+            <h2 class="section-title">
+                Explore Every Corner Of Paradise
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="gallery-card large-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1200&auto=format&fit=crop"
+                        class="img-fluid"
+                        alt="Luxury Suite">
+
+                    <div class="gallery-overlay">
+
+                        <h5>Presidential Suite</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="row g-4">
+
+                    <div class="col-12">
+
+                        <div class="gallery-card">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop"
+                                class="img-fluid"
+                                alt="Luxury Interior">
+
+                            <div class="gallery-overlay">
+
+                                <h5>Luxury Interiors</h5>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <div class="gallery-card">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
+                                class="img-fluid"
+                                alt="Ocean Villa">
+
+                            <div class="gallery-overlay">
+
+                                <h5>Ocean View Villas</h5>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        RESORT EXPERIENCES
+========================== -->
+
+<section class="resort-experience">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <span class="section-tag">
+                    LIFESTYLE EXPERIENCE
+                </span>
+
+                <h2>
+                    Luxury Beyond Expectations
+                </h2>
+
+                <p>
+                    Every moment at Paradise Cove Resort is crafted
+                    to create unforgettable memories. From private
+                    beach walks to sunset cruises and wellness
+                    retreats, every experience reflects elegance
+                    and sophistication.
+                </p>
+
+                <p>
+                    Discover a destination where luxury, comfort,
+                    and adventure come together seamlessly.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop"
+                    alt="Luxury Experience"
+                    class="img-fluid rounded shadow-lg">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        FINE DINING GALLERY
+========================== -->
+
+<section class="dining-gallery">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                FINE DINING
+            </span>
+
+            <h2 class="section-title">
+                Culinary Excellence
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+                        alt="Restaurant"
+                        class="img-fluid">
+
+                    <div class="gallery-overlay">
+
+                        <h5>Oceanfront Dining</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop"
+                        alt="Luxury Dining"
+                        class="img-fluid">
+
+                    <div class="gallery-overlay">
+
+                        <h5>Luxury Restaurant</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop"
+                        alt="Chef Special"
+                        class="img-fluid">
+
+                    <div class="gallery-overlay">
+
+                        <h5>Chef's Special Menu</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        WATER ACTIVITIES
+========================== -->
+
+<section class="water-activities">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                ADVENTURE ACTIVITIES
+            </span>
+
+            <h2 class="section-title">
+                Exciting Water Adventures
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="activity-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop"
+                        alt="Jet Ski"
+                        class="img-fluid">
+
+                    <h5>Jet Skiing</h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="activity-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop"
+                        alt="Scuba Diving"
+                        class="img-fluid">
+
+                    <h5>Scuba Diving</h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="activity-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1000&auto=format&fit=crop"
+                        alt="Parasailing"
+                        class="img-fluid">
+
+                    <h5>Parasailing</h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="activity-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop"
+                        alt="Kayaking"
+                        class="img-fluid">
+
+                    <h5>Kayaking</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Statistics, CTA & Footer Starts In Part 3 -->
+ <!-- ==========================
+        RESORT STATISTICS
+========================== -->
+
+<section class="gallery-stats">
+
+    <div class="container">
+
+        <div class="row text-center g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="stat-card">
+
+                    <h2>20K+</h2>
+
+                    <p>Happy Guests</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="stat-card">
+
+                    <h2>250+</h2>
+
+                    <p>Luxury Rooms</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="stat-card">
+
+                    <h2>15+</h2>
+
+                    <p>Years of Excellence</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="stat-card">
+
+                    <h2>98%</h2>
+
+                    <p>Guest Satisfaction</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        GUEST MEMORIES
+========================== -->
+
+<section class="guest-memories">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                GUEST MEMORIES
+            </span>
+
+            <h2 class="section-title">
+                Moments That Last Forever
+            </h2>
+
+        </div>
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img
+                    src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop"
+                    alt="Guest Experience"
+                    class="img-fluid rounded shadow-lg">
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <p>
+                    Paradise Cove Resort is more than a destination;
+                    it's a place where unforgettable memories are created.
+                    Every sunrise, every beach walk, and every luxury
+                    experience becomes part of a story our guests cherish forever.
+                </p>
+
+                <p>
+                    From romantic getaways to family vacations and
+                    adventure-filled escapes, Paradise Cove Resort
+                    delivers experiences that inspire, relax, and delight.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        CTA SECTION
+========================== -->
+
+<section class="gallery-cta">
+
+    <div class="container">
+
+        <div class="cta-content text-center">
+
+            <h2>
+                Experience Paradise For Yourself
+            </h2>
+
+            <p>
+                Book your luxury escape today and discover
+                world-class hospitality, breathtaking scenery,
+                and unforgettable experiences.
+            </p>
+
+            <a href="booking.html"
+                class="btn cta-btn">
+                Reserve Your Stay
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        FOOTER
+========================== -->
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row gy-5">
+
+            <div class="col-lg-4">
+
+                <h3 class="footer-logo">
+                    <a href="index.html">
+                        <img src="images/image.png" alt="Paradise Cove Resort">
+                    </a>
+                </h3>
+
+                <p>
+                    Luxury beachfront experiences crafted
+                    to create unforgettable memories and
+                    exceptional comfort.
+                </p>
+
+            </div>
+
+            <div class="col-lg-2">
+
+                <h5>Quick Links</h5>
+
+                <ul class="footer-links">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resorts.html">Resorts</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5>Contact Info</h5>
+
+                <ul class="footer-links">
+
+                    <li>📍 Paradise Beach, Maldives</li>
+                    <li>📞 +91 98765 43210</li>
+                    <li>✉ info@paradisecove.com</li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5>Follow Us</h5>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center copyright-text">
+
+            <p>
+                © 2026 Paradise Cove Resort. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/navbar.js"></script>
+<script src="js/gallery.js"></script>
+
+</body>
+</html>

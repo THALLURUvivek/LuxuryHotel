@@ -1,0 +1,218 @@
+// ==========================
+// SHOW / HIDE PASSWORD
+// ==========================
+
+const togglePassword =
+    document.getElementById("togglePassword");
+
+const passwordField =
+    document.getElementById("password");
+
+if (togglePassword && passwordField) {
+
+    togglePassword.addEventListener("click", () => {
+
+        const type =
+            passwordField.getAttribute("type") === "password"
+            ? "text"
+            : "password";
+
+        passwordField.setAttribute("type", type);
+
+        togglePassword.innerHTML =
+            type === "password"
+            ? '<i class="bi bi-eye"></i>'
+            : '<i class="bi bi-eye-slash"></i>';
+
+    });
+
+}
+
+// ==========================
+// FORM VALIDATION
+// ==========================
+
+const signinForm =
+    document.getElementById("signinForm");
+
+if (signinForm) {
+
+    signinForm.addEventListener("submit", (e) => {
+
+        e.preventDefault();
+
+        const email =
+            document.getElementById("email");
+
+        const password =
+            document.getElementById("password");
+
+        let isValid = true;
+
+        // Reset Border
+
+        email.style.borderColor = "";
+        password.style.borderColor = "";
+
+        // Email Validation
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (
+            email.value.trim() === "" ||
+            !emailPattern.test(email.value)
+        ) {
+
+            email.style.borderColor = "red";
+            isValid = false;
+
+        }
+
+        // Password Validation
+
+        if (
+            password.value.trim() === "" ||
+            password.value.length < 6
+        ) {
+
+            password.style.borderColor = "red";
+            isValid = false;
+
+        }
+
+        if (!isValid) {
+
+            showMessage(
+                "Please enter valid login details",
+                false
+            );
+
+            return;
+
+        }
+
+        // Loading State
+
+        const submitBtn =
+            document.querySelector(".signin-btn");
+
+        submitBtn.innerHTML =
+            "Signing In...";
+
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+
+            // Store Session
+
+            localStorage.setItem(
+                "isLoggedIn",
+                "true"
+            );
+
+            localStorage.setItem(
+                "userEmail",
+                email.value
+            );
+
+            showMessage(
+                "Login Successful",
+                true
+            );
+
+            submitBtn.innerHTML =
+                "Sign In";
+
+            submitBtn.disabled = false;
+
+            // Redirect
+
+            setTimeout(() => {
+
+                window.location.href =
+                    "index.html";
+
+            }, 1500);
+
+        }, 1500);
+
+    });
+
+}
+
+// ==========================
+// SUCCESS / ERROR MESSAGE
+// ==========================
+
+function showMessage(message, success) {
+
+    const existing =
+        document.querySelector(".login-message");
+
+    if (existing) {
+
+        existing.remove();
+
+    }
+
+    const msg =
+        document.createElement("div");
+
+    msg.classList.add("login-message");
+
+    msg.textContent = message;
+
+    msg.style.background =
+        success
+        ? "#198754"
+        : "#dc3545";
+
+    document.body.appendChild(msg);
+
+    setTimeout(() => {
+
+        msg.classList.add("show-message");
+
+    }, 100);
+
+    setTimeout(() => {
+
+        msg.classList.remove(
+            "show-message"
+        );
+
+        setTimeout(() => {
+
+            msg.remove();
+
+        }, 500);
+
+    }, 3000);
+
+}
+
+// ==========================
+// ENTER KEY SUPPORT
+// ==========================
+
+document.addEventListener("keydown", (e) => {
+
+    if (
+        e.key === "Enter" &&
+        document.activeElement.tagName !==
+        "TEXTAREA"
+    ) {
+
+        const form =
+            document.getElementById("signinForm");
+
+        if (form) {
+
+            form.requestSubmit();
+
+        }
+
+    }
+
+});

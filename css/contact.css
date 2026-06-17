@@ -1,0 +1,435 @@
+/* ==========================
+   CONTACT HERO
+========================== */
+
+.contact-hero {
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000&auto=format&fit=crop')
+    center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.contact-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 47, 0.70);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-content span {
+    color: #D4AF37;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* ==========================
+   COMMON
+========================== */
+
+.section-tag {
+    color: #D4AF37;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: #0A192F;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.contact-description {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ==========================
+   CONTACT INTRO
+========================== */
+
+.contact-intro {
+    padding: 100px 0 50px;
+}
+
+/* ==========================
+   CONTACT INFO
+========================== */
+
+.contact-info {
+    padding: 50px 0 100px;
+}
+
+.info-card {
+    background: #fff;
+    text-align: center;
+    padding: 40px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all .4s ease;
+    height: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card i {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.info-card h4 {
+    color: #0A192F;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   CONTACT FORM
+========================== */
+
+.contact-form-section {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.contact-form-wrapper {
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form-wrapper h2 {
+    color: #0A192F;
+    margin: 15px 0 30px;
+}
+
+.form-control,
+.form-select {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: none;
+    border-color: #D4AF37;
+}
+
+.submit-btn {
+    background: #D4AF37;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 50px;
+    border: none;
+}
+
+.submit-btn:hover {
+    background: #b8941f;
+    color: #fff;
+}
+
+/* ==========================
+   RESERVATION CARD
+========================== */
+
+.reservation-card {
+    background: #0A192F;
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.reservation-card h3 {
+    margin-bottom: 20px;
+}
+
+.reservation-item {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.reservation-item i {
+    color: #D4AF37;
+    font-size: 1.3rem;
+    margin-right: 15px;
+}
+
+/* ==========================
+   WORKING HOURS
+========================== */
+
+.working-hours {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.hours-card {
+    background: #F8F5F0;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.hour-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.hour-row:last-child {
+    border-bottom: none;
+}
+
+/* ==========================
+   MAP SECTION
+========================== */
+
+.location-section {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   FAQ SECTION
+========================== */
+
+.faq-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 15px !important;
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-weight: 600;
+    padding: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #D4AF37;
+    color: #fff;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* ==========================
+   CTA SECTION
+========================== */
+
+.contact-cta {
+    padding: 100px 0;
+    background:
+    linear-gradient(
+    rgba(10,25,47,.8),
+    rgba(10,25,47,.8)),
+    url('https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=2000&auto=format&fit=crop')
+    center center/cover;
+}
+
+.cta-content h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    color: #ddd;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.cta-btn {
+    background: #D4AF37;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 50px;
+}
+
+.cta-btn:hover {
+    background: #b8941f;
+    color: #fff;
+}
+
+/* ==========================
+   REVEAL ANIMATION
+========================== */
+
+.info-card,
+.contact-form-wrapper,
+.reservation-card,
+.hours-card {
+
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all .8s ease;
+
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 991px) {
+
+    .hero-content h1,
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+
+    .reservation-card {
+        padding: 30px;
+    }
+
+    .hour-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+}
+/* ==========================
+   SUCCESS MESSAGE
+========================== */
+
+.success-message {
+
+    position: fixed;
+
+    top: 30px;
+    right: 30px;
+
+    background: #0A192F;
+    color: #fff;
+
+    padding: 15px 25px;
+
+    border-left: 5px solid #D4AF37;
+
+    border-radius: 10px;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    transform: translateX(100px);
+
+    transition: all 0.5s ease;
+
+}
+
+.show-success {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+/* ==========================
+   SCROLL TOP BUTTON
+========================== */
+
+.scroll-top-btn {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #D4AF37;
+    color: #fff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.4s ease;
+
+    z-index: 999;
+
+}
+
+.show-btn {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.scroll-top-btn:hover {
+
+    transform: translateY(-5px);
+
+}

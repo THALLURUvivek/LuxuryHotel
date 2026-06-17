@@ -1,0 +1,456 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#0A192F;
+}
+
+/* ==========================
+   SIGNIN SECTION
+========================== */
+
+.signin-section{
+    min-height:100vh;
+    background:url('../images/login-bg.jpg') center center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(10,25,47,0.78);
+}
+
+/* ==========================
+   BACKGROUND GLOW EFFECTS
+========================== */
+
+.signin-section::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(212,175,55,0.15);
+    filter:blur(120px);
+    top:-150px;
+    left:-150px;
+}
+
+.signin-section::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    filter:blur(120px);
+    right:-100px;
+    bottom:-100px;
+}
+
+/* ==========================
+   SIGNIN CARD
+========================== */
+
+.signin-card{
+
+    position:relative;
+    z-index:2;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+    0 25px 45px rgba(0,0,0,0.25),
+    0 0 40px rgba(212,175,55,0.15);
+
+    overflow:hidden;
+
+    animation:floatCard 5s ease-in-out infinite;
+}
+
+.signin-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #D4AF37,
+        transparent
+    );
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.signin-logo{
+    width:180px;
+    margin-bottom:20px;
+
+    filter:
+    drop-shadow(
+        0 4px 15px
+        rgba(102,115,55,0.4)
+    );
+}
+
+/* ==========================
+   HEADING
+========================== */
+
+.signin-card h2{
+
+    color:#D4AF37;
+
+    font-size:2.3rem;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 0 15px rgba(212,175,55,0.4);
+}
+
+.signin-card p{
+    color:#ffffff;
+}
+
+/* ==========================
+   FORM LABELS
+========================== */
+
+.form-label{
+    color:#ffffff;
+    font-weight:500;
+    margin-bottom:8px;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.form-control{
+
+    height:60px;
+
+    border-radius:15px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    color:#ffffff;
+
+    padding:0 20px;
+
+    transition:all .4s ease;
+}
+
+.form-control::placeholder{
+    color:rgba(255,255,255,0.6);
+}
+
+.form-control:focus{
+
+    background:
+    rgba(255,255,255,0.12);
+
+    border-color:#D4AF37;
+
+    color:#ffffff;
+
+    box-shadow:
+    0 0 15px rgba(212,175,55,0.3);
+
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   PASSWORD
+========================== */
+
+.password-wrapper{
+    position:relative;
+}
+
+#togglePassword{
+
+    position:absolute;
+
+    right:18px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#D4AF37;
+
+    font-size:1.2rem;
+}
+
+/* ==========================
+   CHECKBOX
+========================== */
+
+#remember{
+    accent-color:#D4AF37;
+}
+
+label[for="remember"]{
+    color:#ffffff;
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+.forgot-link,
+.signup-link a{
+
+    color:#D4AF37;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.forgot-link:hover,
+.signup-link a:hover{
+
+    color:#ffffff;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.signin-btn{
+
+    width:100%;
+    height:60px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #D4AF37,
+        #f1c95c
+    );
+
+    color:#0A192F;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    transition:.4s;
+}
+
+.signin-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 25px rgba(212,175,55,0.4);
+}
+
+/* ==========================
+   SOCIAL LOGIN
+========================== */
+
+.social-login{
+    text-align:center;
+    margin-top:30px;
+}
+
+.social-login p{
+    color:#ffffff;
+}
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.social-icons a{
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    color:#ffffff;
+
+    font-size:1.2rem;
+
+    text-decoration:none;
+
+    transition:.5s;
+}
+
+.social-icons a:hover{
+
+    background:#D4AF37;
+
+    color:#0A192F;
+
+    transform:
+    translateY(-6px)
+    rotate(360deg);
+}
+
+/* ==========================
+   SIGNUP LINK
+========================== */
+
+.signup-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#ffffff;
+}
+
+/* ==========================
+   SUCCESS MESSAGE
+========================== */
+
+.login-message{
+
+    position:fixed;
+
+    top:30px;
+    right:30px;
+
+    padding:15px 25px;
+
+    border-radius:10px;
+
+    color:#ffffff;
+
+    opacity:0;
+
+    transform:translateX(100px);
+
+    transition:.5s;
+
+    z-index:9999;
+}
+
+.show-message{
+
+    opacity:1;
+
+    transform:translateX(0);
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .signin-card{
+        padding:35px;
+    }
+
+    .signin-logo{
+        width:150px;
+    }
+
+    .signin-card h2{
+        font-size:2rem;
+    }
+}
+
+@media(max-width:576px){
+
+    .signin-card{
+        padding:25px;
+    }
+
+    .signin-logo{
+        width:120px;
+    }
+
+    .signin-card h2{
+        font-size:1.7rem;
+    }
+
+    .form-control,
+    .signin-btn{
+        height:55px;
+    }
+}

@@ -1,0 +1,398 @@
+/* ==========================
+   AMENITIES HERO SECTION
+========================== */
+
+.amenities-hero {
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop')
+        center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.amenities-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 47, 0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-content span {
+    color: #D4AF37;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    max-width: 700px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* ==========================
+   COMMON STYLES
+========================== */
+
+.section-tag {
+    color: #D4AF37;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: #0A192F;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/* ==========================
+   INTRO SECTION
+========================== */
+
+.amenities-intro {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.amenities-intro h2 {
+    color: #0A192F;
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+.amenities-intro p {
+    color: #666;
+    line-height: 1.9;
+}
+
+/* ==========================
+   FACILITY CARDS
+========================== */
+
+.facilities-section {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.facility-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+}
+
+.facility-card i {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.facility-card h4 {
+    color: #0A192F;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   SPA SECTION
+========================== */
+
+.spa-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.spa-section h2 {
+    color: #0A192F;
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+.spa-section p {
+    color: #666;
+    line-height: 1.9;
+}
+
+/* ==========================
+   WATER SPORTS
+========================== */
+
+.water-sports {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.activity-card {
+    background: #ffffff;
+    text-align: center;
+    padding: 35px 25px;
+    border-radius: 20px;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+}
+
+.activity-card i {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   FITNESS SECTION
+========================== */
+
+.fitness-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.fitness-section h2 {
+    color: #0A192F;
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+.fitness-section p {
+    color: #666;
+    line-height: 1.9;
+}
+
+/* ==========================
+   PRIVATE BEACH
+========================== */
+
+.private-beach {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.private-beach h2 {
+    color: #0A192F;
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+.private-beach p {
+    color: #666;
+    line-height: 1.9;
+}
+
+/* ==========================
+   STATS SECTION
+========================== */
+
+.amenity-stats {
+    background: #0A192F;
+    padding: 90px 0;
+}
+
+.stat-card {
+    padding: 25px;
+}
+
+.stat-card h2 {
+    color: #D4AF37;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.stat-card p {
+    color: #ffffff;
+}
+
+/* ==========================
+   GUEST EXPERIENCE
+========================== */
+
+.guest-experience {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.guest-experience h2 {
+    color: #0A192F;
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+.guest-experience p {
+    color: #666;
+    line-height: 1.9;
+}
+
+/* ==========================
+   CTA SECTION
+========================== */
+
+.amenities-cta {
+    padding: 100px 0;
+    background:
+        linear-gradient(
+            rgba(10,25,47,0.8),
+            rgba(10,25,47,0.8)
+        ),
+        url('https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=2000&auto=format&fit=crop')
+        center center/cover;
+}
+
+.cta-content h2 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    color: #dddddd;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.cta-btn {
+    background: #D4AF37;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 14px 35px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.cta-btn:hover {
+    background: #b8941f;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ==========================
+   ANIMATION SUPPORT
+========================== */
+
+.facility-card,
+.activity-card,
+.stat-card {
+    transition: all 0.5s ease;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width: 991px) {
+
+    .hero-content h1,
+    .section-title,
+    .amenities-intro h2,
+    .spa-section h2,
+    .fitness-section h2,
+    .private-beach h2,
+    .guest-experience h2 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+}
+/* ==========================
+   REVEAL ANIMATION
+========================== */
+
+.facility-card,
+.activity-card,
+.stat-card {
+
+    opacity: 0;
+    transform: translateY(60px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+/* ==========================
+   SCROLL TOP BUTTON
+========================== */
+
+.scroll-top-btn {
+
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #D4AF37;
+    color: #ffffff;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+
+    transition: all 0.4s ease;
+
+}
+
+.show-btn {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.scroll-top-btn:hover {
+
+    transform: translateY(-5px);
+
+}

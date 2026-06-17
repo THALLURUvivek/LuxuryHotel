@@ -1,0 +1,388 @@
+/* ==========================
+   RESORT HERO
+========================== */
+
+.resort-hero {
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2000&auto=format&fit=crop')
+    center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.resort-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 47, 0.65);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-content span {
+    color: #D4AF37;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    max-width: 650px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* ==========================
+   COMMON STYLES
+========================== */
+
+.section-tag {
+    color: #D4AF37;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: #0A192F;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/* ==========================
+   INTRO SECTION
+========================== */
+
+.resort-intro {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.resort-intro h2 {
+    color: #0A192F;
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+.resort-intro p {
+    color: #666;
+    line-height: 1.9;
+}
+
+/* ==========================
+   ROOM CARDS
+========================== */
+
+.room-categories {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.room-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+}
+
+.room-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.room-content {
+    padding: 25px;
+}
+
+.room-content h4 {
+    color: #0A192F;
+    margin-bottom: 15px;
+}
+
+.room-content p {
+    color: #666;
+}
+
+.room-content h5 {
+    color: #D4AF37;
+    font-weight: 700;
+}
+
+/* ==========================
+   VILLA SHOWCASE
+========================== */
+
+.villa-showcase {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.villa-showcase h2 {
+    color: #0A192F;
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+.villa-showcase p {
+    color: #666;
+    line-height: 1.9;
+}
+
+.villa-book-btn {
+    background: #D4AF37;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.villa-book-btn:hover {
+    background: #b8941f;
+    color: #fff;
+}
+
+/* ==========================
+   FEATURE CARDS
+========================== */
+
+.room-features {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 35px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   AMENITIES
+========================== */
+
+.included-amenities {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.amenity-box {
+    background: #F8F5F0;
+    padding: 35px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.amenity-box:hover {
+    transform: translateY(-10px);
+}
+
+.amenity-box i {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   PRICING
+========================== */
+
+.pricing-section {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.pricing-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.featured-plan {
+    border: 3px solid #D4AF37;
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #D4AF37;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+.pricing-card h2 {
+    color: #D4AF37;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-btn {
+    background: #0A192F;
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 30px;
+    margin-top: 20px;
+}
+
+.pricing-btn:hover {
+    background: #D4AF37;
+    color: #fff;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.resort-stats {
+    background: #0A192F;
+    padding: 90px 0;
+}
+
+.stat-box h2 {
+    color: #D4AF37;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.stat-box p {
+    color: #fff;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.resort-cta {
+    padding: 100px 0;
+    background:
+    linear-gradient(rgba(10,25,47,.8),
+    rgba(10,25,47,.8)),
+    url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2000&auto=format&fit=crop')
+    center center/cover;
+}
+
+.cta-content h2 {
+    color: #fff;
+    font-size: 3rem;
+}
+
+.cta-content p {
+    color: #ddd;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.cta-btn {
+    background: #D4AF37;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 50px;
+}
+
+.cta-btn:hover {
+    background: #b8941f;
+    color: #fff;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:991px){
+
+    .hero-content h1,
+    .section-title,
+    .villa-showcase h2,
+    .resort-intro h2{
+        font-size:2.5rem;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    .section-title{
+        font-size:1.8rem;
+    }
+
+}
+/* ==========================
+   REVEAL ANIMATION
+========================== */
+
+.room-card,
+.feature-card,
+.amenity-box,
+.pricing-card,
+.stat-box {
+
+    opacity: 0;
+    transform: translateY(60px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
