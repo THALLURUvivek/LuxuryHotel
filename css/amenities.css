@@ -308,7 +308,8 @@
     .spa-section h2,
     .fitness-section h2,
     .private-beach h2,
-    .guest-experience h2 {
+    .guest-experience h2,
+    .wellness-programs h2 {
         font-size: 2.5rem;
     }
 
@@ -328,22 +329,105 @@
         font-size: 2rem;
     }
 
+    .dining-card {
+        padding: 30px 20px;
+    }
+
 }
 /* ==========================
+   DINING OPTIONS
+========================= */
+
+.dining-options {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.dining-card {
+    background: #F8F5F0;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.dining-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.dining-card i {
+    font-size: 3rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+}
+
+.dining-card h4 {
+    color: #0A192F;
+    margin-bottom: 15px;
+}
+
+.dining-card p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ==========================
+   WELLNESS PROGRAMS
+========================= */
+
+.wellness-programs {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.wellness-programs h2 {
+    color: #0A192F;
+    font-size: 2.8rem;
+    margin: 20px 0;
+}
+
+.wellness-programs p {
+    color: #666;
+    line-height: 1.9;
+}
+
+.wellness-list {
+    margin-top: 25px;
+}
+
+.wellness-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.wellness-item i {
+    color: #D4AF37;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.wellness-item span {
+    color: #333;
+    font-weight: 500;
+}
+
+/* ==========================
    REVEAL ANIMATION
-========================== */
+========================= */
 
 .facility-card,
 .activity-card,
-.stat-card {
-
+.stat-card,
+.dining-card,
+.wellness-item {
     opacity: 0;
     transform: translateY(60px);
-
     transition:
         opacity 0.8s ease,
         transform 0.8s ease;
-
 }
 
 .show {

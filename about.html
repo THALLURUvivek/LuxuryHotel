@@ -98,12 +98,12 @@
 
                 <div class="nav-buttons">
 
-                    <a href="signin.html"
+                    <a href="signinpage.html"
                         class="btn btn-outline-light me-2">
                         Sign In
                     </a>
 
-                    <a href="booking.html"
+                    <a href="resorts.html"
                         class="btn book-btn">
                         Book Now
                     </a>
@@ -613,6 +613,129 @@
 </section>
 
 <!-- ==========================
+        PARTNERS & AFFILIATIONS
+=========================== -->
+
+<section class="partners-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                OUR PARTNERS
+            </span>
+
+            <h2 class="section-title">
+                Trusted & Recognized Worldwide
+            </h2>
+
+        </div>
+
+        <div class="row g-4 align-items-center justify-content-center">
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="partner-logo">
+                    <i class="bi bi-building"></i>
+                    <span>Luxury Travel Alliance</span>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="partner-logo">
+                    <i class="bi bi-star"></i>
+                    <span>Forbes Travel Guide</span>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="partner-logo">
+                    <i class="bi bi-shield-check"></i>
+                    <span>ISO Certified</span>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="partner-logo">
+                    <i class="bi bi-trophy"></i>
+                    <span>World Travel Awards</span>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="partner-logo">
+                    <i class="bi bi-globe2"></i>
+                    <span>Green Globe Certified</span>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="partner-logo">
+                    <i class="bi bi-award"></i>
+                    <span>Leading Hotels World</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        NEWSLETTER
+=========================== -->
+
+<section class="about-newsletter">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6 text-center">
+
+                <span class="section-tag">
+                    STAY CONNECTED
+                </span>
+
+                <h2>
+                    Subscribe To Our Newsletter
+                </h2>
+
+                <p>
+                    Receive exclusive offers, travel inspiration,
+                    and resort updates delivered to your inbox.
+                </p>
+
+                <form class="newsletter-form" id="aboutNewsletterForm">
+
+                    <div class="input-group">
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            placeholder="Enter your email"
+                            required>
+
+                        <button
+                            type="submit"
+                            class="btn subscribe-btn">
+                            Subscribe
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
         CTA SECTION
 =========================== -->
 
@@ -631,7 +754,7 @@
                 accommodations, and unforgettable experiences.
             </p>
 
-            <a href="booking.html"
+            <a href="error.html"
                 class="btn cta-btn">
                 Book Your Stay
             </a>
@@ -702,10 +825,10 @@
 
                 <div class="social-icons">
 
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#"><i class="bi bi-youtube"></i></a>
+                    <a href="error.html"><i class="bi bi-facebook"></i></a>
+                    <a href="error.html"><i class="bi bi-instagram"></i></a>
+                    <a href="error.html"><i class="bi bi-twitter-x"></i></a>
+                    <a href="error.html"><i class="bi bi-youtube"></i></a>
 
                 </div>
 
@@ -730,6 +853,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="js/navbar.js"></script>
+
+    <script>
+        const aboutNewsletterForm = document.getElementById('aboutNewsletterForm');
+        if (aboutNewsletterForm) {
+            aboutNewsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = this.querySelector('.subscribe-btn');
+                const original = btn.textContent;
+                btn.textContent = 'Subscribed!';
+                this.querySelector('input').value = '';
+                setTimeout(() => { btn.textContent = original; }, 3000);
+            });
+        }
+    </script>
 
 </body>
 

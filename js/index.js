@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
 // ==========================
 
 const revealElements = document.querySelectorAll(
-    ".villa-card, .amenity-card, .testimonial-card, .stat-box"
+    ".villa-card, .amenity-card, .testimonial-card, .stat-box, .offer-card, .dining-feature-item, .award-card"
 );
 
 function revealOnScroll() {
@@ -185,3 +185,69 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 
 });
+
+// ==========================
+// NEWSLETTER FORM
+// ==========================
+
+const newsletterForm =
+    document.getElementById("newsletterForm");
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener(
+        "submit",
+        function (e) {
+
+            e.preventDefault();
+
+            const input =
+                this.querySelector(
+                    'input[type="email"]'
+                );
+
+            const consent =
+                document.getElementById(
+                    "newsletterConsent"
+                );
+
+            if (!consent.checked) {
+
+                alert(
+                    "Please agree to receive promotional emails."
+                );
+
+                return;
+
+            }
+
+            const btn =
+                this.querySelector(
+                    ".subscribe-btn"
+                );
+
+            const originalText =
+                btn.textContent;
+
+            btn.textContent =
+                "Subscribed!";
+
+            btn.style.background =
+                "#198754";
+
+            input.value = "";
+
+            setTimeout(() => {
+
+                btn.textContent =
+                    originalText;
+
+                btn.style.background =
+                    "";
+
+            }, 3000);
+
+        }
+    );
+
+}

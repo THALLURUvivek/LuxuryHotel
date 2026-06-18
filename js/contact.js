@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
 
 const revealElements =
     document.querySelectorAll(
-        ".info-card, .contact-form-wrapper, .reservation-card, .hours-card"
+        ".info-card, .contact-form-wrapper, .reservation-card, .hours-card, .dept-card, .dept-image-wrapper, .dept-intro, .dept-stats"
     );
 
 function revealOnScroll() {

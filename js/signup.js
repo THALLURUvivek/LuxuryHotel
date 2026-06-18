@@ -56,6 +56,9 @@ if (signupForm) {
         const confirmPassword =
             document.getElementById("confirmPassword");
 
+        const role =
+            document.getElementById("role");
+
         const terms =
             document.getElementById("terms");
 
@@ -191,14 +194,52 @@ if (signupForm) {
             phone:
                 phone.value.trim(),
 
+            role:
+                role.value,
+
             password:
                 password.value
 
         };
 
+        // Store in users array for multi-user support
+
+        const existingUsers =
+            JSON.parse(
+                localStorage.getItem("resortUsers") || "[]"
+            );
+
+        const existingIndex =
+            existingUsers.findIndex(
+                u => u.email === userData.email
+            );
+
+        if (existingIndex !== -1) {
+
+            existingUsers[existingIndex] =
+                userData;
+
+        } else {
+
+            existingUsers.push(userData);
+
+        }
+
+        localStorage.setItem(
+            "resortUsers",
+            JSON.stringify(existingUsers)
+        );
+
+        // Keep resortUser for backward compatibility
+
         localStorage.setItem(
             "resortUser",
             JSON.stringify(userData)
+        );
+
+        localStorage.setItem(
+            "userRole",
+            userData.role
         );
 
         // ==========================
@@ -217,7 +258,7 @@ if (signupForm) {
         setTimeout(() => {
 
             window.location.href =
-                "signin.html";
+                "signinpage.html";
 
         }, 2000);
 

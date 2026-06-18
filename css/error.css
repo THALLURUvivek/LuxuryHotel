@@ -1,0 +1,133 @@
+/* ==========================
+   404 HERO
+========================= */
+
+.error-hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(10,25,47,0.85),
+            rgba(10,25,47,0.85)
+        ),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop')
+        center center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.error-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.error-content .error-number {
+    font-size: 10rem;
+    font-weight: 900;
+    color: #D4AF37;
+    line-height: 1;
+    text-shadow: 0 0 40px rgba(212,175,55,0.3);
+    margin-bottom: 10px;
+}
+
+.error-content h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.error-content p {
+    color: #ddd;
+    font-size: 1.1rem;
+    max-width: 550px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+}
+
+.error-content .error-icon {
+    font-size: 5rem;
+    color: #D4AF37;
+    opacity: 0.3;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.error-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-home {
+    background: #D4AF37;
+    color: #0A192F;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: none;
+    transition: all 0.4s ease;
+}
+
+.btn-home:hover {
+    background: #fff;
+    color: #0A192F;
+    transform: translateY(-3px);
+}
+
+.btn-back {
+    background: transparent;
+    color: #D4AF37;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 2px solid #D4AF37;
+    transition: all 0.4s ease;
+}
+
+.btn-back:hover {
+    background: #D4AF37;
+    color: #0A192F;
+    transform: translateY(-3px);
+}
+
+/* ==========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+    .error-content .error-number {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .error-content .error-number {
+        font-size: 7rem;
+    }
+
+    .error-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .error-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .error-content .error-number {
+        font-size: 5rem;
+    }
+
+    .error-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .error-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}

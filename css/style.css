@@ -1,20 +1,81 @@
 /* ==========================
+   GLOBAL RESET
+========================== */
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ==========================
    HERO SECTION
 ========================== */
 
 .hero-section {
     min-height: 100vh;
-    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop')
-        center center/cover no-repeat;
     position: relative;
-    display: flex;
-    align-items: center;
+    overflow: hidden;
+}
+
+.hero-section #heroCarousel {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-section .carousel-inner,
+.hero-section .carousel-item {
+    height: 100vh;
+}
+
+.hero-slide {
+    height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
+    z-index: 2;
     background: rgba(10, 25, 47, 0.55);
+}
+
+.hero-content-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .carousel-indicators {
+    z-index: 3;
+}
+
+.hero-section .carousel-indicators button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #D4AF37;
+    background: transparent;
+    opacity: 1;
+}
+
+.hero-section .carousel-indicators button.active {
+    background: #D4AF37;
+}
+
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+    z-index: 3;
+}
+
+.hero-section .carousel-control-prev-icon,
+.hero-section .carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    padding: 20px;
 }
 
 .hero-content {
@@ -287,6 +348,83 @@
 }
 
 /* ==========================
+   AWARDS SECTION
+========================== */
+
+.awards-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.award-card {
+    background: #F8F5F0;
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.award-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #D4AF37;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.award-icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background: #D4AF37;
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+    display: inline-block;
+}
+
+.award-card h4 {
+    color: #0A192F;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+
+.award-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.award-year {
+    display: inline-block;
+    background: #0A192F;
+    color: #D4AF37;
+    font-weight: 700;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 991px) {
+
+    .award-card {
+        margin-bottom: 20px;
+    }
+
+}
+
+/* ==========================
    CTA SECTION
 ========================== */
 
@@ -371,7 +509,8 @@
 .villa-card,
 .amenity-card,
 .testimonial-card,
-.stat-box {
+.stat-box,
+.award-card {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
@@ -405,4 +544,342 @@
 .show-btn {
     opacity: 1;
     visibility: visible;
+}
+
+/* ==========================
+   OFFERS SECTION
+=========================== */
+
+.offers-section {
+    background: #F8F5F0;
+    padding: 100px 0;
+}
+
+.offer-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.offer-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.featured-offer {
+    border: 2px solid #D4AF37;
+    transform: scale(1.04);
+}
+
+.featured-offer:hover {
+    transform: scale(1.04) translateY(-12px);
+}
+
+.offer-badge {
+    display: inline-block;
+    background: #D4AF37;
+    color: #0A192F;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.offer-card i.bi-heart,
+.offer-card i.bi-star,
+.offer-card i.bi-gem {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.offer-card h4 {
+    color: #0A192F;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.offer-price {
+    margin-bottom: 20px;
+}
+
+.offer-price .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #D4AF37;
+}
+
+.offer-price .night {
+    color: #888;
+    font-size: 0.95rem;
+}
+
+.offer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: left;
+}
+
+.offer-list li {
+    padding: 8px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offer-list li i {
+    color: #198754;
+    font-size: 1.1rem;
+}
+
+.offer-btn {
+    background: #0A192F;
+    color: #fff;
+    width: 100%;
+    padding: 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.offer-btn:hover {
+    background: #D4AF37;
+    color: #fff;
+}
+
+/* ==========================
+   DINING SECTION
+=========================== */
+
+.dining-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.dining-section h2 {
+    font-size: 2.8rem;
+    color: #0A192F;
+    margin-bottom: 25px;
+}
+
+.dining-section p {
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.dining-features {
+    margin-bottom: 30px;
+}
+
+.dining-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dining-feature-item i {
+    font-size: 1.5rem;
+    color: #D4AF37;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.dining-feature-item h6 {
+    margin: 0;
+    color: #0A192F;
+    font-weight: 600;
+}
+
+.dining-feature-item p {
+    margin: 3px 0 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* ==========================
+   NEWSLETTER SECTION
+=========================== */
+
+.newsletter-section {
+    padding: 100px 0;
+    background: #0A192F;
+}
+
+.newsletter-wrapper h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-wrapper p {
+    color: #cfd8dc;
+    margin-bottom: 0;
+}
+
+.newsletter-input-group {
+    display: flex;
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 60px;
+    padding: 6px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.newsletter-input-group .form-control {
+    height: 55px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.newsletter-input-group .form-control::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.newsletter-input-group .form-control:focus {
+    box-shadow: none;
+    background: transparent;
+}
+
+.subscribe-btn {
+    background: #D4AF37;
+    color: #0A192F;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+    border: none;
+    height: 55px;
+}
+
+.subscribe-btn:hover {
+    background: #b8941f;
+    color: #0A192F;
+}
+
+.newsletter-check {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.newsletter-check input[type="checkbox"] {
+    accent-color: #D4AF37;
+}
+
+.newsletter-check label {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+}
+
+/* ==========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 991px) {
+
+    .featured-offer {
+        transform: scale(1);
+    }
+
+    .featured-offer:hover {
+        transform: translateY(-12px);
+    }
+
+    .dining-section h2,
+    .newsletter-wrapper h2 {
+        font-size: 2.2rem;
+    }
+
+    .newsletter-input-group {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .newsletter-input-group .form-control {
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 50px;
+    }
+
+    .subscribe-btn {
+        width: 100%;
+    }
+
+}
+
+/* ==========================
+   FAQ SECTION
+=========================== */
+
+.faq-section {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.faq-section .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 15px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.faq-section .accordion-button {
+    font-weight: 600;
+    padding: 20px 25px;
+    color: #0A192F;
+    background: #fff;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+    background: #D4AF37;
+    color: #fff;
+}
+
+.faq-section .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-section .accordion-body {
+    padding: 20px 25px;
+    color: #666;
+    line-height: 1.8;
+    background: #fff;
+}
+
+@media (max-width: 576px) {
+
+    .offer-card {
+        padding: 30px 20px;
+    }
+
+    .offer-price .price {
+        font-size: 2rem;
+    }
+
+    .dining-section h2,
+    .newsletter-wrapper h2 {
+        font-size: 1.8rem;
+    }
+
 }

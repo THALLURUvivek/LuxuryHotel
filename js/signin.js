@@ -116,6 +116,51 @@ if (signinForm) {
                 email.value
             );
 
+            // Look up user name from stored users array
+
+            const allUsers =
+                JSON.parse(
+                    localStorage.getItem("resortUsers") || "[]"
+                );
+
+            const matchedUser =
+                allUsers.find(
+                    u => u.email === email.value.trim()
+                );
+
+            const userFullName =
+                matchedUser
+                    ? matchedUser.fullName
+                    : email.value.split("@")[0];
+
+            localStorage.setItem(
+                "userFullName",
+                userFullName
+            );
+
+            // Save selected role for navbar
+
+            const selectedRole =
+                matchedUser
+                    ? matchedUser.role
+                    : document.getElementById("loginRole").value;
+
+            localStorage.setItem(
+                "userRole",
+                selectedRole
+            );
+
+            // Also update resortUser for backward compatibility
+
+            if (matchedUser) {
+
+                localStorage.setItem(
+                    "resortUser",
+                    JSON.stringify(matchedUser)
+                );
+
+            }
+
             showMessage(
                 "Login Successful",
                 true
@@ -126,12 +171,31 @@ if (signinForm) {
 
             submitBtn.disabled = false;
 
-            // Redirect
+            // Redirect Based On Selected Role
+
+            let redirectUrl = "dashboard-guest.html";
+
+            switch (selectedRole) {
+
+                case "admin":
+                    redirectUrl =
+                        "dashboard-admin.html";
+                    break;
+
+                case "staff":
+                    redirectUrl =
+                        "dashboard-staff.html";
+                    break;
+
+                default:
+                    redirectUrl =
+                        "dashboard-guest.html";
+            }
 
             setTimeout(() => {
 
                 window.location.href =
-                    "index.html";
+                    redirectUrl;
 
             }, 1500);
 
@@ -191,6 +255,66 @@ function showMessage(message, success) {
     }, 3000);
 
 }
+
+// ==========================
+// PRE-SELECT ROLE FROM STORED DATA
+// ==========================
+
+(function () {
+
+    const roleSelect =
+        document.getElementById("loginRole");
+
+    if (!roleSelect) return;
+
+    // Try from stored user first
+
+    const allUsers =
+        JSON.parse(
+            localStorage.getItem("resortUsers") || "[]"
+        );
+
+    const lastEmail =
+        localStorage.getItem("userEmail");
+
+    if (lastEmail) {
+
+        const matched =
+            allUsers.find(
+                u => u.email === lastEmail
+            );
+
+        if (matched && matched.role) {
+
+            roleSelect.value =
+                matched.role;
+
+            return;
+
+        }
+
+    }
+
+    // Fall back to resortUser
+
+    const storedUser =
+        localStorage.getItem("resortUser");
+
+    if (storedUser) {
+
+        const data =
+            JSON.parse(storedUser);
+
+        if (data.role) {
+
+            roleSelect.value =
+                data.role;
+
+        }
+
+    }
+
+})();
 
 // ==========================
 // ENTER KEY SUPPORT

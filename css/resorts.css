@@ -360,6 +360,10 @@
         font-size:1.8rem;
     }
 
+    .review-card {
+        padding: 25px;
+    }
+
 }
 /* ==========================
    REVEAL ANIMATION
@@ -370,19 +374,141 @@
 .amenity-box,
 .pricing-card,
 .stat-box {
-
     opacity: 0;
     transform: translateY(60px);
-
     transition:
         opacity 0.8s ease,
         transform 0.8s ease;
-
 }
 
-.show {
+/* ==========================
+   GUEST REVIEWS
+========================= */
 
+.guest-reviews {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.review-card {
+    background: #F8F5F0;
+    padding: 35px;
+    border-radius: 20px;
+    height: 100%;
+    transition: all 0.4s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.review-stars {
+    margin-bottom: 20px;
+}
+
+.review-stars i {
+    color: #D4AF37;
+    font-size: 1.1rem;
+    margin-right: 3px;
+}
+
+.review-card p {
+    color: #555;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.review-author h5 {
+    color: #0A192F;
+    margin-bottom: 4px;
+    font-size: 1.05rem;
+}
+
+.review-author span {
+    color: #D4AF37;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ==========================
+   ROOM COMPARISON
+========================= */
+
+.room-comparison {
+    padding: 100px 0;
+    background: #F8F5F0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.comparison-table th {
+    background: #0A192F;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.comparison-table th:first-child {
+    text-align: left;
+}
+
+.comparison-table th.highlight-col {
+    background: #D4AF37;
+    color: #fff;
+}
+
+.comparison-table td {
+    padding: 16px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #0A192F;
+}
+
+.comparison-table td.highlight-col {
+    background: #FFFBFA;
+}
+
+.comparison-table td i {
+    color: #D4AF37;
+    font-size: 1.2rem;
+}
+
+.comparison-table .na {
+    color: #ccc;
+    font-weight: 700;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table td strong {
+    color: #D4AF37;
+    font-size: 1.1rem;
+}
+
+/* ==========================
+   REVEAL ANIMATION (continued)
+========================= */
+
+.show {
     opacity: 1;
     transform: translateY(0);
-
 }

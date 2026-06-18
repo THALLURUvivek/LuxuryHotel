@@ -3,7 +3,7 @@
 ========================== */
 
 .custom-navbar {
-    background: rgba(10, 25, 47, 0.15);
+    background: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: all 0.4s ease;
@@ -109,7 +109,7 @@
 ========================== */
 
 .custom-navbar.scrolled {
-    background: rgba(10, 25, 47, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     padding: 12px 0;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
@@ -121,13 +121,22 @@
 @media (max-width: 991px) {
 
     .custom-navbar {
-        background: rgba(10, 25, 47, 0.98);
+        background: rgba(0, 0, 0, 0.98);
     }
 
     .navbar-collapse {
-        margin-top: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         padding: 20px;
-        border-radius: 12px;
+        border-radius: 0 0 20px 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
 
     .navbar-nav {

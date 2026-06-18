@@ -12,7 +12,6 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
 
     <!-- Bootstrap Icons -->
@@ -86,7 +85,7 @@
                         Sign In
                     </a>
 
-                    <a href="booking.html" class="btn book-btn">
+                    <a href="resorts.html" class="btn book-btn">
                         Book Now
                     </a>
 
@@ -103,40 +102,74 @@
 
     <section class="hero-section">
 
-        <div class="hero-overlay"></div>
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-        <div class="container">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
 
-            <div class="row align-items-center min-vh-100">
+            <div class="carousel-inner">
 
-                <div class="col-lg-7">
+                <div class="carousel-item active">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-slide" style="background:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2000&auto=format&fit=crop') center center/cover no-repeat;"></div>
+                </div>
 
-                    <div class="hero-content">
+                <div class="carousel-item">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-slide" style="background:url('https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?q=80&w=2000&auto=format&fit=crop') center center/cover no-repeat;"></div>
+                </div>
 
-                        <span class="hero-subtitle">
-                            Welcome To Paradise Cove Resort
-                        </span>
+                <div class="carousel-item">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-slide" style="background:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2000&auto=format&fit=crop') center center/cover no-repeat;"></div>
+                </div>
 
-                        <h1>
-                            Experience Luxury
-                            Beside The Ocean
-                        </h1>
+            </div>
 
-                        <p>
-                            Discover breathtaking ocean views,
-                            world-class hospitality, luxurious villas,
-                            and unforgettable beachside experiences.
-                        </p>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
 
-                        <div class="hero-buttons">
+            <div class="container hero-content-wrapper">
 
-                            <a href="booking.html" class="btn hero-btn">
-                                Reserve Your Stay
-                            </a>
+                <div class="row align-items-center min-vh-100">
 
-                            <a href="resorts.html" class="btn explore-btn">
-                                Explore Villas
-                            </a>
+                    <div class="col-lg-7">
+
+                        <div class="hero-content">
+
+                            <span class="hero-subtitle">
+                                Welcome To Paradise Cove Resort
+                            </span>
+
+                            <h1>
+                                Experience Luxury
+                                Beside The Ocean
+                            </h1>
+
+                            <p>
+                                Discover breathtaking ocean views,
+                                world-class hospitality, luxurious villas,
+                                and unforgettable beachside experiences.
+                            </p>
+
+                            <div class="hero-buttons">
+
+                                <a href="error.html" class="btn hero-btn">
+                                    Reserve Your Stay
+                                </a>
+
+                                <a href="resorts.html" class="btn explore-btn">
+                                    Explore Villas
+                                </a>
+
+                            </div>
 
                         </div>
 
@@ -259,7 +292,7 @@
 
                             <span>$299 / Night</span>
 
-                            <a href="booking.html"
+                            <a href="error.html"
                                 class="btn btn-sm villa-btn">
                                 Book Now
                             </a>
@@ -294,7 +327,7 @@
 
                             <span>$399 / Night</span>
 
-                            <a href="booking.html"
+                            <a href="error.html"
                                 class="btn btn-sm villa-btn">
                                 Book Now
                             </a>
@@ -329,7 +362,7 @@
 
                             <span>$599 / Night</span>
 
-                            <a href="booking.html"
+                            <a href="error.html"
                                 class="btn btn-sm villa-btn">
                                 Book Now
                             </a>
@@ -589,6 +622,549 @@
 </section>
 
 <!-- ==========================
+      SPECIAL OFFERS SECTION
+=========================== -->
+
+<section class="offers-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                EXCLUSIVE OFFERS
+            </span>
+
+            <h2 class="section-title">
+                Special Packages & Offers
+            </h2>
+
+            <p class="section-description">
+                Indulge in our carefully curated resort packages
+                designed to make your stay truly unforgettable.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="offer-card">
+
+                    <div class="offer-badge">Best Value</div>
+
+                    <i class="bi bi-heart"></i>
+
+                    <h4>Romantic Getaway</h4>
+
+                    <div class="offer-price">
+                        <span class="price">$499</span>
+                        <span class="night">/ night</span>
+                    </div>
+
+                    <ul class="offer-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Ocean View Villa</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Candlelight Dinner</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Couples Spa Treatment</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Sunset Cruise</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Breakfast in Bed</li>
+                    </ul>
+
+                    <a href="error.html" class="btn offer-btn">
+                        Book This Package
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="offer-card featured-offer">
+
+                    <div class="offer-badge">Most Popular</div>
+
+                    <i class="bi bi-star"></i>
+
+                    <h4>Family Paradise</h4>
+
+                    <div class="offer-price">
+                        <span class="price">$699</span>
+                        <span class="night">/ night</span>
+                    </div>
+
+                    <ul class="offer-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Beachfront Suite</li>
+                        <li><i class="bi bi-check-circle-fill"></i> All Meals Included</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Kids Activities</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Water Sports</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Family Excursion</li>
+                    </ul>
+
+                    <a href="error.html" class="btn offer-btn">
+                        Book This Package
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="offer-card">
+
+                    <div class="offer-badge">Ultimate Luxury</div>
+
+                    <i class="bi bi-gem"></i>
+
+                    <h4>Presidential Escape</h4>
+
+                    <div class="offer-price">
+                        <span class="price">$1,299</span>
+                        <span class="night">/ night</span>
+                    </div>
+
+                    <ul class="offer-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Presidential Villa</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Private Butler</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Private Infinity Pool</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Luxury Yacht Tour</li>
+                        <li><i class="bi bi-check-circle-fill"></i> VIP Airport Transfer</li>
+                    </ul>
+
+                    <a href="error.html" class="btn offer-btn">
+                        Book This Package
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+      DINING SECTION
+=========================== -->
+
+<section class="dining-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+                    class="img-fluid rounded shadow"
+                    alt="Fine Dining">
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <span class="section-tag">
+                    CULINARY EXCELLENCE
+                </span>
+
+                <h2>
+                    A World-Class Fine
+                    Dining Experience
+                </h2>
+
+                <p>
+                    Indulge in an extraordinary culinary journey
+                    at our award-winning restaurants. From fresh
+                    seafood on the beachfront to gourmet international
+                    cuisine, every meal is a celebration of flavor.
+                </p>
+
+                <div class="dining-features">
+
+                    <div class="dining-feature-item">
+                        <i class="bi bi-star-fill"></i>
+                        <div>
+                            <h6>Michelin-Star Chefs</h6>
+                            <p>World-renowned culinary masters</p>
+                        </div>
+                    </div>
+
+                    <div class="dining-feature-item">
+                        <i class="bi bi-basket-fill"></i>
+                        <div>
+                            <h6>Fresh Local Ingredients</h6>
+                            <p>Sourced daily from island markets</p>
+                        </div>
+                    </div>
+
+                    <div class="dining-feature-item">
+                        <i class="bi bi-wine"></i>
+                        <div>
+                            <h6>Premium Wine Cellar</h6>
+                            <p>Over 500 international labels</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="amenities.html" class="btn learn-btn">
+                    Explore Dining
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+      NEWSLETTER SECTION
+=========================== -->
+
+<section class="newsletter-section">
+
+    <div class="container">
+
+        <div class="newsletter-wrapper">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <span class="section-tag">
+                        STAY CONNECTED
+                    </span>
+
+                    <h2>
+                        Join Our Exclusive
+                        Resort Newsletter
+                    </h2>
+
+                    <p>
+                        Subscribe to receive special offers,
+                        exclusive packages, and updates about
+                        Paradise Cove Resort.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <form class="newsletter-form" id="newsletterForm">
+
+                        <div class="newsletter-input-group">
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter your email address"
+                                required>
+
+                            <button
+                                type="submit"
+                                class="btn subscribe-btn">
+                                Subscribe
+                            </button>
+
+                        </div>
+
+                        <div class="newsletter-check">
+                            <input type="checkbox" id="newsletterConsent" checked>
+                            <label for="newsletterConsent">
+                                I agree to receive promotional emails
+                            </label>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        FAQ SECTION
+=========================== -->
+
+<section class="faq-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                FAQ
+            </span>
+
+            <h2 class="section-title">
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="accordion"
+                    id="faqAccordion">
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+
+                                What is the check-in and check-out time?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq1"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Check-in is from 2:00 PM and
+                                check-out is until 11:00 AM.
+                                Early check-in and late check-out
+                                are available upon request.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+
+                                Do you offer airport transfers?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq2"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Yes, we provide luxury airport
+                                transfer services. Our chauffeur
+                                will greet you at the arrivals
+                                hall and ensure a comfortable
+                                journey to the resort.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+
+                                What dining options are available?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq3"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                We offer multiple dining venues
+                                including beachfront fine dining,
+                                casual poolside lounge, and
+                                private in-villa dining with
+                                personalized menus.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+
+                                Is the resort family-friendly?
+
+                            </button>
+
+                        </h2>
+
+                        <div id="faq4"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Absolutely. We offer family suites,
+                                kids activities, babysitting services,
+                                and a dedicated children pool to
+                                ensure a memorable stay for all ages.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+      AWARDS SECTION
+=========================== -->
+
+<section class="awards-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+                AWARDS & RECOGNITION
+            </span>
+
+            <h2 class="section-title">
+                Our Prestigious Accolades
+            </h2>
+
+            <p class="section-description">
+                We take pride in the recognition we have received
+                from the world's leading hospitality authorities.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="award-card text-center">
+
+                    <div class="award-icon">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+
+                    <h4>World's Leading Beach Resort</h4>
+
+                    <p>
+                        Awarded by World Travel Awards for
+                        exceptional beachfront luxury and
+                        world-class hospitality.
+                    </p>
+
+                    <span class="award-year">2025</span>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="award-card text-center">
+
+                    <div class="award-icon">
+                        <i class="bi bi-award-fill"></i>
+                    </div>
+
+                    <h4>Five-Star Diamond Award</h4>
+
+                    <p>
+                        Recognized by the American Academy of
+                        Hospitality Sciences for outstanding
+                        service and premium amenities.
+                    </p>
+
+                    <span class="award-year">2024</span>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="award-card text-center">
+
+                    <div class="award-icon">
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+
+                    <h4>Forbes Travel Guide Five-Star</h4>
+
+                    <p>
+                        Rated five stars by Forbes for our
+                        impeccable service, luxurious
+                        accommodations, and fine dining.
+                    </p>
+
+                    <span class="award-year">2026</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
       CALL TO ACTION SECTION
 =========================== -->
 
@@ -607,7 +1183,7 @@
                 amenities, and unforgettable memories.
             </p>
 
-            <a href="booking.html" class="btn cta-btn">
+            <a href="error.html" class="btn cta-btn">
                 Book Your Dream Vacation
             </a>
 
@@ -677,20 +1253,16 @@
 
                 <div class="social-icons">
 
-                    <a href="#">
-                        <i class="bi bi-facebook"></i>
+                    <a href="error.html"><i class="bi bi-facebook"></i>
                     </a>
 
-                    <a href="#">
-                        <i class="bi bi-instagram"></i>
+                    <a href="error.html"><i class="bi bi-instagram"></i>
                     </a>
 
-                    <a href="#">
-                        <i class="bi bi-twitter-x"></i>
+                    <a href="error.html"><i class="bi bi-twitter-x"></i>
                     </a>
 
-                    <a href="#">
-                        <i class="bi bi-youtube"></i>
+                    <a href="error.html"><i class="bi bi-youtube"></i>
                     </a>
 
                 </div>

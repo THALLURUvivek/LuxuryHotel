@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard | Paradise Cove Resort</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html"><img src="images/image.png" alt="Paradise Cove"></a>
+                <h4>Staff Panel</h4>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="error.html" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+                <li><a href="error.html"><i class="bi bi-calendar-day"></i> My Schedule</a></li>
+                <li><a href="error.html"><i class="bi bi-door-open"></i> Room Status</a></li>
+                <li><a href="error.html"><i class="bi bi-bell"></i> Guest Requests</a></li>
+                <li><a href="error.html"><i class="bi bi-house-door"></i> Back to Site</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main -->
+        <div class="main-content">
+
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="dashboard-header">
+                <h1>Staff Dashboard</h1>
+                <div class="header-right">
+                    <div class="user-info">
+                        <div class="user-avatar" id="staffAvatar">S</div>
+                        <div class="user-details">
+                            <h5 id="staffName">Staff</h5>
+                            <span>Staff Member</span>
+                        </div>
+                    </div>
+                    <button class="logout-btn" id="logoutBtn">Sign Out</button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon gold"><i class="bi bi-door-open"></i></div>
+                    <div class="stat-info">
+                        <h3>24</h3>
+                        <p>Rooms Assigned</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="bi bi-person-check"></i></div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>Checked In Today</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="bi bi-bell"></i></div>
+                    <div class="stat-info">
+                        <h3>5</h3>
+                        <p>Pending Requests</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon red"><i class="bi bi-clock"></i></div>
+                    <div class="stat-info">
+                        <h3>3</h3>
+                        <p>Upcoming Checkouts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasks -->
+            <div class="section-card">
+                <h3>Today's Tasks</h3>
+                <div class="task-item">
+                    <input type="checkbox" class="task-check">
+                    <div class="task-text">
+                        <h6>Prepare Ocean View Villa for Check-in</h6>
+                        <span>Room 204 - Check-in at 2:00 PM</span>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <input type="checkbox" class="task-check">
+                    <div class="task-text">
+                        <h6>Restock Mini Bar - Beachfront Suite</h6>
+                        <span>Room 108 - Priority</span>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <input type="checkbox" class="task-check">
+                    <div class="task-text">
+                        <h6>Deliver Welcome Basket to Presidential Suite</h6>
+                        <span>Room 301 - VIP Guest Arrival</span>
+                    </div>
+                </div>
+                <div class="task-item">
+                    <input type="checkbox" class="task-check">
+                    <div class="task-text">
+                        <h6>Coordinate Spa Appointment</h6>
+                        <span>Guest: Emma Wilson - 4:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guest Requests -->
+            <div class="section-card">
+                <h3>Recent Guest Requests</h3>
+                <div class="booking-card">
+                    <div>
+                        <h5>Extra Towels & Pillows</h5>
+                        <p>Room 207 - Sarah Johnson</p>
+                    </div>
+                    <span class="status status-pending">In Progress</span>
+                </div>
+                <div class="booking-card">
+                    <div>
+                        <h5>Room Service - Dinner</h5>
+                        <p>Room 105 - Michael Brown</p>
+                    </div>
+                    <span class="status status-confirmed">Delivered</span>
+                </div>
+                <div class="booking-card">
+                    <div>
+                        <h5>Airport Transfer Request</h5>
+                        <p>Room 301 - David Anderson</p>
+                    </div>
+                    <span class="status status-checked-in">Scheduled</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>
