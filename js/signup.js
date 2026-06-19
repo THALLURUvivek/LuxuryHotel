@@ -1,4 +1,27 @@
 // ==========================
+// CUSTOM DROPDOWN
+// ==========================
+
+document.addEventListener("click", function(e) {
+    const sel = e.target.closest(".custom-select");
+    document.querySelectorAll(".custom-select.open").forEach(function(el) {
+        if (el !== sel) el.classList.remove("open");
+    });
+    if (sel) {
+        sel.classList.toggle("open");
+        const opt = e.target.closest(".custom-option");
+        if (opt) {
+            sel.setAttribute("data-value", opt.getAttribute("data-value"));
+            sel.querySelector(".custom-select-text").textContent = opt.textContent;
+            sel.querySelectorAll(".custom-option").forEach(function(o) {
+                o.classList.toggle("selected", o === opt);
+            });
+            sel.classList.remove("open");
+        }
+    }
+});
+
+// ==========================
 // SHOW / HIDE PASSWORD
 // ==========================
 
@@ -225,7 +248,7 @@ if (signupForm) {
                 phone.value.trim(),
 
             role:
-                role.value,
+                role.getAttribute("data-value"),
 
             password:
                 password.value

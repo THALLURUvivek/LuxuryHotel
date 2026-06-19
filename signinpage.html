@@ -66,19 +66,17 @@
                                     Login As
                                 </label>
 
-                                <select
-                                    id="loginRole"
-                                    class="form-select">
-                                    <option value="guest" selected>
-                                        Guest
-                                    </option>
-                                    <option value="staff">
-                                        Staff
-                                    </option>
-                                    <option value="admin">
-                                        Admin
-                                    </option>
-                                </select>
+                                <div class="custom-select" id="loginRole" data-value="guest">
+                                    <div class="custom-select-trigger">
+                                        <span class="custom-select-text">Guest</span>
+                                        <i class="bi bi-chevron-down"></i>
+                                    </div>
+                                    <div class="custom-options">
+                                        <div class="custom-option" data-value="guest">Guest</div>
+                                        <div class="custom-option" data-value="staff">Staff</div>
+                                        <div class="custom-option" data-value="admin">Admin</div>
+                                    </div>
+                                </div>
 
                             </div>
 

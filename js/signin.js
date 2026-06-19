@@ -1,4 +1,27 @@
 // ==========================
+// CUSTOM DROPDOWN
+// ==========================
+
+document.addEventListener("click", function(e) {
+    const sel = e.target.closest(".custom-select");
+    document.querySelectorAll(".custom-select.open").forEach(function(el) {
+        if (el !== sel) el.classList.remove("open");
+    });
+    if (sel) {
+        sel.classList.toggle("open");
+        const opt = e.target.closest(".custom-option");
+        if (opt) {
+            sel.setAttribute("data-value", opt.getAttribute("data-value"));
+            sel.querySelector(".custom-select-text").textContent = opt.textContent;
+            sel.querySelectorAll(".custom-option").forEach(function(o) {
+                o.classList.toggle("selected", o === opt);
+            });
+            sel.classList.remove("open");
+        }
+    }
+});
+
+// ==========================
 // SHOW / HIDE PASSWORD
 // ==========================
 
@@ -153,7 +176,7 @@ if (signinForm) {
         // Verify selected role matches the user's signup role
 
         const selectedRole =
-            document.getElementById("loginRole").value;
+            document.getElementById("loginRole").getAttribute("data-value");
 
         if (selectedRole !== matchedUser.role) {
 
@@ -308,6 +331,17 @@ function showMessage(message, success) {
 
     if (!roleSelect) return;
 
+    function setRole(val) {
+        const opt = roleSelect.querySelector('.custom-option[data-value="' + val + '"]');
+        if (opt) {
+            roleSelect.setAttribute("data-value", val);
+            roleSelect.querySelector(".custom-select-text").textContent = opt.textContent;
+            roleSelect.querySelectorAll(".custom-option").forEach(function(o) {
+                o.classList.toggle("selected", o === opt);
+            });
+        }
+    }
+
     // Try from stored user first
 
     const allUsers =
@@ -327,8 +361,7 @@ function showMessage(message, success) {
 
         if (matched && matched.role) {
 
-            roleSelect.value =
-                matched.role;
+            setRole(matched.role);
 
             return;
 
@@ -348,8 +381,7 @@ function showMessage(message, success) {
 
         if (data.role) {
 
-            roleSelect.value =
-                data.role;
+            setRole(data.role);
 
         }
 
