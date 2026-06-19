@@ -47,6 +47,7 @@
                         <div class="user-details">
                             <h5 id="adminName">Admin</h5>
                             <span>Administrator</span>
+                            <small class="user-email" id="adminEmail">-</small>
                         </div>
                     </div>
                     <button class="logout-btn" id="logoutBtn">Sign Out</button>
@@ -138,6 +139,134 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Occupancy Overview -->
+            <div class="section-card">
+                <h3>Occupancy Overview</h3>
+                <div class="occupancy-grid">
+                    <div class="occupancy-item">
+                        <div class="occupancy-header">
+                            <span>Standard Rooms</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="occupancy-bar">
+                            <div class="occupancy-bar-fill" style="width:82%"></div>
+                        </div>
+                    </div>
+                    <div class="occupancy-item">
+                        <div class="occupancy-header">
+                            <span>Ocean View Suites</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="occupancy-bar">
+                            <div class="occupancy-bar-fill" style="width:94%"></div>
+                        </div>
+                    </div>
+                    <div class="occupancy-item">
+                        <div class="occupancy-header">
+                            <span>Beachfront Villas</span>
+                            <span>68%</span>
+                        </div>
+                        <div class="occupancy-bar">
+                            <div class="occupancy-bar-fill" style="width:68%"></div>
+                        </div>
+                    </div>
+                    <div class="occupancy-item">
+                        <div class="occupancy-header">
+                            <span>Presidential Suites</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="occupancy-bar">
+                            <div class="occupancy-bar-fill" style="width:45%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today's Check-ins & Check-outs -->
+            <div class="section-card">
+                <h3>Today's Arrivals & Departures</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                    <div>
+                        <h4 style="font-size:0.9rem;color:#2d2a24;font-weight:700;margin-bottom:10px;">
+                            <i class="bi bi-box-arrow-in-right" style="color:#22c55e;margin-right:5px;"></i> Check-ins
+                        </h4>
+                        <div class="checkin-item">
+                            <div class="checkin-info">
+                                <h6>Sarah Johnson</h6>
+                                <p>Ocean View Villa · 2:00 PM</p>
+                            </div>
+                            <span class="status status-confirmed" style="font-size:0.7rem;">Ready</span>
+                        </div>
+                        <div class="checkin-item">
+                            <div class="checkin-info">
+                                <h6>Robert Chen</h6>
+                                <p>Beachfront Suite · 3:00 PM</p>
+                            </div>
+                            <span class="status status-pending" style="font-size:0.7rem;">Pending</span>
+                        </div>
+                        <div class="checkin-item">
+                            <div class="checkin-info">
+                                <h6>Amara Williams</h6>
+                                <p>Presidential Suite · 4:00 PM</p>
+                            </div>
+                            <span class="status status-confirmed" style="font-size:0.7rem;">VIP</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="font-size:0.9rem;color:#2d2a24;font-weight:700;margin-bottom:10px;">
+                            <i class="bi bi-box-arrow-right" style="color:#ef4444;margin-right:5px;"></i> Check-outs
+                        </h4>
+                        <div class="checkin-item">
+                            <div class="checkin-info">
+                                <h6>Michael Brown</h6>
+                                <p>Beachfront Suite · 11:00 AM</p>
+                            </div>
+                            <span class="status status-checked-in" style="font-size:0.7rem;">Today</span>
+                        </div>
+                        <div class="checkin-item">
+                            <div class="checkin-info">
+                                <h6>Emily Davis</h6>
+                                <p>Ocean View Villa · 12:00 PM</p>
+                            </div>
+                            <span class="status status-checked-in" style="font-size:0.7rem;">Today</span>
+                        </div>
+                        <div class="checkin-item">
+                            <div class="checkin-info">
+                                <h6>James Wilson</h6>
+                                <p>Standard Room · 10:00 AM</p>
+                            </div>
+                            <span class="status status-confirmed" style="font-size:0.7rem;">Done</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Reviews -->
+            <div class="section-card">
+                <h3>Recent Guest Reviews</h3>
+                <div class="review-item">
+                    <div class="review-avatar">S</div>
+                    <div class="review-content">
+                        <h6>Sarah M. <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></h6>
+                        <p>Absolutely stunning resort! The ocean view from our villa was breathtaking. Staff went above and beyond.</p>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="review-avatar">J</div>
+                    <div class="review-content">
+                        <h6>James K. <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span></h6>
+                        <p>Wonderful experience. The food at Seaside Restaurant was incredible. Will definitely return next year.</p>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="review-avatar">L</div>
+                    <div class="review-content">
+                        <h6>Lisa T. <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></h6>
+                        <p>Best luxury resort we've ever been to. The sunset cruise was absolutely magical. Highly recommend!</p>
+                    </div>
                 </div>
             </div>
 

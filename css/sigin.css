@@ -20,7 +20,7 @@ body{
 
 .signin-section{
     min-height:100vh;
-    background:url('../images/login-bg.jpg') center center/cover no-repeat;
+    background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop') center center/cover no-repeat;
     position:relative;
     display:flex;
     align-items:center;
@@ -224,8 +224,6 @@ body{
 
     box-shadow:
     0 0 15px rgba(212,175,55,0.3);
-
-    transform:translateY(-2px);
 }
 
 .form-select{
@@ -383,30 +381,48 @@ label[for="remember"]{
     align-items:center;
     justify-content:center;
 
-    background:
-    rgba(255,255,255,0.08);
-
-    border:
-    1px solid rgba(255,255,255,0.15);
-
-    color:#ffffff;
-
     font-size:1.2rem;
 
     text-decoration:none;
 
     transition:.5s;
+
+    color:#ffffff;
+}
+
+.social-icons a:nth-child(1){
+    background:#DB4437;
+    border:1px solid rgba(219,68,55,0.3);
+    box-shadow:0 4px 15px rgba(219,68,55,0.3);
+}
+
+.social-icons a:nth-child(2){
+    background:#1877F2;
+    border:1px solid rgba(24,119,242,0.3);
+    box-shadow:0 4px 15px rgba(24,119,242,0.3);
+}
+
+.social-icons a:nth-child(3){
+    background:#000000;
+    border:1px solid rgba(0,0,0,0.3);
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
 .social-icons a:hover{
-
-    background:#D4AF37;
-
-    color:#0A192F;
-
     transform:
-    translateY(-6px)
-    rotate(360deg);
+    translateY(-6px);
+}
+
+.social-icons a:nth-child(1):hover{
+    box-shadow:0 8px 30px rgba(219,68,55,0.5);
+}
+
+.social-icons a:nth-child(2):hover{
+    box-shadow:0 8px 30px rgba(24,119,242,0.5);
+}
+
+.social-icons a:nth-child(3):hover{
+    box-shadow:0 8px 30px rgba(0,0,0,0.35);
 }
 
 /* ==========================
@@ -482,6 +498,7 @@ label[for="remember"]{
 
     .signin-card{
         padding:35px;
+        animation:none;
     }
 
     .signin-logo{
@@ -508,7 +525,15 @@ label[for="remember"]{
     }
 
     .form-control,
+    .form-select,
     .signin-btn{
-        height:55px;
+        height:50px;
+        font-size:0.95rem;
+    }
+
+    .form-select{
+        padding-right:35px;
+        background-position:right 12px center;
+        background-size:14px;
     }
 }

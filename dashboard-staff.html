@@ -26,7 +26,7 @@
                 <li><a href="error.html"><i class="bi bi-calendar-day"></i> My Schedule</a></li>
                 <li><a href="error.html"><i class="bi bi-door-open"></i> Room Status</a></li>
                 <li><a href="error.html"><i class="bi bi-bell"></i> Guest Requests</a></li>
-                <li><a href="error.html"><i class="bi bi-house-door"></i> Back to Site</a></li>
+                <li><a href="index.html"><i class="bi bi-house-door"></i> Back to Site</a></li>
             </ul>
         </aside>
 
@@ -45,6 +45,7 @@
                         <div class="user-details">
                             <h5 id="staffName">Staff</h5>
                             <span>Staff Member</span>
+                            <small class="user-email" id="staffEmail">-</small>
                         </div>
                     </div>
                     <button class="logout-btn" id="logoutBtn">Sign Out</button>
@@ -68,14 +69,14 @@
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon blue"><i class="bi bi-bell"></i></div>
+                    <div class="stat-icon orange"><i class="bi bi-bell"></i></div>
                     <div class="stat-info">
                         <h3>5</h3>
                         <p>Pending Requests</p>
                     </div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-icon red"><i class="bi bi-clock"></i></div>
+                    <div class="stat-icon teal"><i class="bi bi-clock"></i></div>
                     <div class="stat-info">
                         <h3>3</h3>
                         <p>Upcoming Checkouts</p>
@@ -112,6 +113,69 @@
                     <div class="task-text">
                         <h6>Coordinate Spa Appointment</h6>
                         <span>Guest: Emma Wilson - 4:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today's Schedule -->
+            <div class="section-card">
+                <h3>Today's Schedule</h3>
+                <div class="schedule-item">
+                    <div class="schedule-dot"></div>
+                    <div class="schedule-time">8:00 AM</div>
+                    <div class="schedule-info">
+                        <h6>Morning Briefing</h6>
+                        <p>Staff meeting at Main Conference Room</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-dot"></div>
+                    <div class="schedule-time">10:00 AM</div>
+                    <div class="schedule-info">
+                        <h6>VIP Check-in Preparation</h6>
+                        <p>Presidential Suite - Welcome amenities setup</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-dot"></div>
+                    <div class="schedule-time">1:00 PM</div>
+                    <div class="schedule-info">
+                        <h6>Pool Area Inspection</h6>
+                        <p>Safety check & maintenance walkthrough</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-dot"></div>
+                    <div class="schedule-time">3:00 PM</div>
+                    <div class="schedule-info">
+                        <h6>Guest Request Review</h6>
+                        <p>Team meeting to review outstanding requests</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIP Guest Alerts -->
+            <div class="section-card">
+                <h3>VIP Guest Alerts</h3>
+                <div class="vip-alert">
+                    <div class="vip-icon"><i class="bi bi-star"></i></div>
+                    <div class="vip-text">
+                        <h6>Amara Williams - Presidential Suite</h6>
+                        <p>Arriving today at 4:00 PM · Anniversary special setup requested</p>
+                    </div>
+                </div>
+                <div class="vip-alert">
+                    <div class="vip-icon"><i class="bi bi-gem"></i></div>
+                    <div class="vip-text">
+                        <h6>Richard & Helen Clarke - Beachfront Villa</h6>
+                        <p>Returning guests · Preferred room 108 · Welcome back basket needed</p>
+                    </div>
+                </div>
+                <div class="vip-alert">
+                    <div class="vip-icon"><i class="bi bi-cup-hot"></i></div>
+                    <div class="vip-text">
+                        <h6>David Anderson - Suite 301</h6>
+                        <p>Airport transfer at 2:30 PM · Private dinner booking at 8:00 PM</p>
                     </div>
                 </div>
             </div>

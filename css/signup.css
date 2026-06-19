@@ -20,7 +20,7 @@ body{
 
 .signup-section{
     min-height:100vh;
-    background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop')
+    background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop')
     center center/cover no-repeat;
     position:relative;
     display:flex;
@@ -141,35 +141,15 @@ body{
 /* ==========================
    LOGO
 ========================== */
-.signup-logo{
 
+.signup-logo{
     width:180px;
     height:auto;
-
-    padding:12px;
-
-    background:white;
-
-    border-radius:20px;
-
-    border:3px solid rgba(212,175,55,0.4);
-
-    box-shadow:
-    0 0 20px rgba(212,175,55,0.3),
-    0 15px 35px rgba(0,0,0,0.25);
-
-    transition:all .4s ease;
-
-}
-
-.signup-logo:hover{
-
-    transform:scale(1.05);
-
-    box-shadow:
-    0 0 35px rgba(212,175,55,0.5),
-    0 20px 40px rgba(0,0,0,0.3);
-
+    margin-bottom:20px;
+    filter:
+        drop-shadow(0 0 12px rgba(255,255,255,0.8))
+        drop-shadow(0 4px 10px rgba(212,175,55,0.4));
+    transition:all 0.4s ease;
 }
 /* ==========================
    HEADING
@@ -243,8 +223,6 @@ body{
 
     box-shadow:
     0 0 15px rgba(212,175,55,0.3);
-
-    transform:translateY(-2px);
 }
 
 .form-select{
@@ -383,30 +361,48 @@ label[for="terms"]{
     align-items:center;
     justify-content:center;
 
-    background:
-    rgba(255,255,255,0.08);
-
-    border:
-    1px solid rgba(255,255,255,0.15);
-
-    color:#ffffff;
-
     font-size:1.2rem;
 
     text-decoration:none;
 
     transition:.5s;
+
+    color:#ffffff;
+}
+
+.social-icons a:nth-child(1){
+    background:#DB4437;
+    border:1px solid rgba(219,68,55,0.3);
+    box-shadow:0 4px 15px rgba(219,68,55,0.3);
+}
+
+.social-icons a:nth-child(2){
+    background:#1877F2;
+    border:1px solid rgba(24,119,242,0.3);
+    box-shadow:0 4px 15px rgba(24,119,242,0.3);
+}
+
+.social-icons a:nth-child(3){
+    background:#000000;
+    border:1px solid rgba(0,0,0,0.3);
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
 .social-icons a:hover{
-
-    background:#D4AF37;
-
-    color:#0A192F;
-
     transform:
-    translateY(-6px)
-    rotate(360deg);
+    translateY(-6px);
+}
+
+.social-icons a:nth-child(1):hover{
+    box-shadow:0 8px 30px rgba(219,68,55,0.5);
+}
+
+.social-icons a:nth-child(2):hover{
+    box-shadow:0 8px 30px rgba(24,119,242,0.5);
+}
+
+.social-icons a:nth-child(3):hover{
+    box-shadow:0 8px 30px rgba(0,0,0,0.35);
 }
 
 /* ==========================
@@ -495,6 +491,7 @@ label[for="terms"]{
 
     .signup-card{
         padding:35px;
+        animation:none;
     }
 
     .signup-logo{
@@ -522,7 +519,15 @@ label[for="terms"]{
     }
 
     .form-control,
+    .form-select,
     .signup-btn{
-        height:55px;
+        height:50px;
+        font-size:0.95rem;
+    }
+
+    .form-select{
+        padding-right:35px;
+        background-position:right 12px center;
+        background-size:14px;
     }
 }

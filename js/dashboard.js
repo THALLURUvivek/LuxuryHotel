@@ -82,6 +82,11 @@ if (displayEmailEl) {
     displayEmailEl.textContent = loggedInEmail;
 }
 
+const emailEl = document.querySelector(".user-email");
+if (emailEl) {
+    emailEl.textContent = loggedInEmail;
+}
+
 if (displayPhoneEl) {
     // Try to get phone from stored user data if available
     let phone = "-";
