@@ -65,6 +65,28 @@
                             <div class="mb-3">
 
                                 <label class="form-label">
+                                    Select Role
+                                </label>
+
+                                <select
+                                    id="role"
+                                    class="form-select">
+                                    <option value="guest" selected>
+                                        Guest
+                                    </option>
+                                    <option value="staff">
+                                        Staff
+                                    </option>
+                                    <option value="admin">
+                                        Admin
+                                    </option>
+                                </select>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <label class="form-label">
                                     Full Name
                                 </label>
 
@@ -107,28 +129,6 @@
                             <div class="mb-3">
 
                                 <label class="form-label">
-                                    Select Role
-                                </label>
-
-                                <select
-                                    id="role"
-                                    class="form-select">
-                                    <option value="guest" selected>
-                                        Guest
-                                    </option>
-                                    <option value="staff">
-                                        Staff
-                                    </option>
-                                    <option value="admin">
-                                        Admin
-                                    </option>
-                                </select>
-
-                            </div>
-
-                            <div class="mb-3">
-
-                                <label class="form-label">
                                     Password
                                 </label>
 
@@ -156,11 +156,21 @@
                                     Confirm Password
                                 </label>
 
-                                <input
-                                    type="password"
-                                    id="confirmPassword"
-                                    class="form-control"
-                                    placeholder="Confirm Password">
+                                <div class="password-wrapper">
+
+                                    <input
+                                        type="password"
+                                        id="confirmPassword"
+                                        class="form-control"
+                                        placeholder="Confirm Password">
+
+                                    <span id="toggleConfirmPassword">
+
+                                        <i class="bi bi-eye"></i>
+
+                                    </span>
+
+                                </div>
 
                             </div>
 

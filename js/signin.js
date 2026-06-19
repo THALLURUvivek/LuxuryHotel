@@ -102,68 +102,23 @@ if (signinForm) {
 
         submitBtn.disabled = true;
 
-        setTimeout(() => {
+        // Look up user from stored users array
 
-            // Store Session
-
-            localStorage.setItem(
-                "isLoggedIn",
-                "true"
+        const allUsers =
+            JSON.parse(
+                localStorage.getItem("resortUsers") || "[]"
             );
 
-            localStorage.setItem(
-                "userEmail",
-                email.value
+        const matchedUser =
+            allUsers.find(
+                u => u.email === email.value.trim()
             );
 
-            // Look up user name from stored users array
-
-            const allUsers =
-                JSON.parse(
-                    localStorage.getItem("resortUsers") || "[]"
-                );
-
-            const matchedUser =
-                allUsers.find(
-                    u => u.email === email.value.trim()
-                );
-
-            const userFullName =
-                matchedUser
-                    ? matchedUser.fullName
-                    : email.value.split("@")[0];
-
-            localStorage.setItem(
-                "userFullName",
-                userFullName
-            );
-
-            // Save selected role for navbar
-
-            const selectedRole =
-                matchedUser
-                    ? matchedUser.role
-                    : document.getElementById("loginRole").value;
-
-            localStorage.setItem(
-                "userRole",
-                selectedRole
-            );
-
-            // Also update resortUser for backward compatibility
-
-            if (matchedUser) {
-
-                localStorage.setItem(
-                    "resortUser",
-                    JSON.stringify(matchedUser)
-                );
-
-            }
+        if (!matchedUser) {
 
             showMessage(
-                "Login Successful",
-                true
+                "No account found with this email. Please sign up first.",
+                false
             );
 
             submitBtn.innerHTML =
@@ -171,33 +126,119 @@ if (signinForm) {
 
             submitBtn.disabled = false;
 
-            // Redirect Based On Selected Role
+            return;
 
-            let redirectUrl = "dashboard-guest.html";
+        }
 
-            switch (selectedRole) {
+        // Verify password
 
-                case "admin":
-                    redirectUrl =
-                        "dashboard-admin.html";
-                    break;
+        if (password.value !== matchedUser.password) {
 
-                case "staff":
-                    redirectUrl =
-                        "dashboard-staff.html";
-                    break;
+            showMessage(
+                "Incorrect password. Please try again.",
+                false
+            );
 
-                default:
-                    redirectUrl =
-                        "dashboard-guest.html";
-            }
+            password.style.borderColor = "red";
 
-            setTimeout(() => {
+            submitBtn.innerHTML =
+                "Sign In";
 
-                window.location.href =
-                    redirectUrl;
+            submitBtn.disabled = false;
 
-            }, 1500);
+            return;
+
+        }
+
+        // Verify selected role matches the user's signup role
+
+        const selectedRole =
+            document.getElementById("loginRole").value;
+
+        if (selectedRole !== matchedUser.role) {
+
+            showMessage(
+                "You signed up as " +
+                matchedUser.role.charAt(0).toUpperCase() +
+                matchedUser.role.slice(1) +
+                ". Please sign in with the '" +
+                matchedUser.role.charAt(0).toUpperCase() +
+                matchedUser.role.slice(1) +
+                "' role or sign up with a different role.",
+                false
+            );
+
+            submitBtn.innerHTML =
+                "Sign In";
+
+            submitBtn.disabled = false;
+
+            return;
+
+        }
+
+        // Store Session
+
+        localStorage.setItem(
+            "isLoggedIn",
+            "true"
+        );
+
+        localStorage.setItem(
+            "userEmail",
+            email.value
+        );
+
+        localStorage.setItem(
+            "userFullName",
+            matchedUser.fullName
+        );
+
+        localStorage.setItem(
+            "userRole",
+            matchedUser.role
+        );
+
+        localStorage.setItem(
+            "resortUser",
+            JSON.stringify(matchedUser)
+        );
+
+        showMessage(
+            "Login Successful",
+            true
+        );
+
+        submitBtn.innerHTML =
+            "Sign In";
+
+        submitBtn.disabled = false;
+
+        // Redirect Based On User's Role
+
+        let redirectUrl = "dashboard-guest.html";
+
+        switch (matchedUser.role) {
+
+            case "admin":
+                redirectUrl =
+                    "dashboard-admin.html";
+                break;
+
+            case "staff":
+                redirectUrl =
+                    "dashboard-staff.html";
+                break;
+
+            default:
+                redirectUrl =
+                    "dashboard-guest.html";
+        }
+
+        setTimeout(() => {
+
+            window.location.href =
+                redirectUrl;
 
         }, 1500);
 

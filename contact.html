@@ -873,55 +873,170 @@
 
     <div class="container">
 
-        <div class="row align-items-center g-5">
+        <div class="text-center mb-5">
 
-            <div class="col-lg-6">
+            <span class="section-tag">
+                GUEST FEEDBACK
+            </span>
 
-                <span class="section-tag">
-                    GUEST FEEDBACK
-                </span>
+            <h2>
+                What Our Guests Say
+            </h2>
 
-                <h2>
-                    What Our Guests Say
-                    About Our Service
-                </h2>
+            <p class="testimonial-subtitle">
+                Real experiences from our valued guests around the world
+            </p>
 
-                <div class="testimonial-slide">
+        </div>
 
+        <div class="testimonial-carousel" id="testimonialCarousel">
+
+            <div class="testimonial-track" id="testimonialTrack">
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <div class="testimonial-text">
-
                         <i class="bi bi-quote"></i>
-
                         <p>
                             "The level of service at Paradise Cove
                             is unmatched. From the moment we arrived,
                             every staff member anticipated our needs
-                            and exceeded our expectations."
+                            and exceeded our expectations. Truly a
+                            world-class experience."
                         </p>
-
                     </div>
-
                     <div class="testimonial-author">
-
-                        <h5>Jennifer Adams</h5>
-
-                        <span>Returning Guest</span>
-
+                        <div class="testimonial-avatar">J</div>
+                        <div class="testimonial-info">
+                            <h5>Jennifer Adams</h5>
+                            <span>Returning Guest · New York</span>
+                        </div>
                     </div>
+                </div>
 
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        <i class="bi bi-quote"></i>
+                        <p>
+                            "Our honeymoon at Paradise Cove was
+                            absolutely magical. The sunset cruise,
+                            the private dining on the beach, and the
+                            luxurious villa made it the most
+                            memorable trip of our lives."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h5>Michael & Sarah</h5>
+                            <span>Honeymooners · London</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        <i class="bi bi-quote"></i>
+                        <p>
+                            "I've traveled to over 30 countries and
+                            stayed at countless resorts, but nothing
+                            compares to the warmth and hospitality
+                            at Paradise Cove. The staff made us feel
+                            like family from day one."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div class="testimonial-info">
+                            <h5>Rachel Kim</h5>
+                            <span>Travel Blogger · Seoul</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        <i class="bi bi-quote"></i>
+                        <p>
+                            "We brought our entire family of 12 for
+                            a week-long celebration. The resort
+                            arranged everything flawlessly from
+                            kids' activities to a private gala dinner.
+                            Every single person had an amazing time."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">D</div>
+                        <div class="testimonial-info">
+                            <h5>David Thompson</h5>
+                            <span>Family Vacation · Sydney</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
-            <div class="col-lg-6">
-
-                <img
-                    src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop"
-                    alt="Guest Experience"
-                    class="img-fluid rounded shadow-lg">
-
+            <div class="testimonial-controls">
+                <button class="testimonial-btn" id="prevBtn">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots" id="testimonialDots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                </div>
+                <button class="testimonial-btn" id="nextBtn">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
             </div>
 
+        </div>
+
+        <div class="testimonial-stats">
+            <div class="testimonial-stat-item">
+                <span class="testimonial-stat-num">4.9</span>
+                <span class="testimonial-stat-label">Average Rating</span>
+            </div>
+            <div class="testimonial-stat-item">
+                <span class="testimonial-stat-num">2,000+</span>
+                <span class="testimonial-stat-label">Happy Guests</span>
+            </div>
+            <div class="testimonial-stat-item">
+                <span class="testimonial-stat-num">98%</span>
+                <span class="testimonial-stat-label">Would Recommend</span>
+            </div>
+            <div class="testimonial-stat-item">
+                <span class="testimonial-stat-num">15+</span>
+                <span class="testimonial-stat-label">Awards Won</span>
+            </div>
         </div>
 
     </div>

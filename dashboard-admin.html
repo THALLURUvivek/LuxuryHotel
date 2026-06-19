@@ -17,9 +17,12 @@
 
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
-            <div class="sidebar-brand">
-                <a href="index.html"><img src="images/image.png" alt="Paradise Cove"></a>
-                <h4>Admin Panel</h4>
+            <div class="sidebar-header">
+                <button class="sidebar-close" id="sidebarClose"><i class="bi bi-x-lg"></i></button>
+                <div class="sidebar-brand">
+                    <a href="index.html"><img src="images/image.png" alt="Paradise Cove"></a>
+                    <h4>Admin Panel</h4>
+                </div>
             </div>
             <ul class="sidebar-nav">
                 <li><a href="error.html" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
@@ -188,9 +191,9 @@
             <!-- Today's Check-ins & Check-outs -->
             <div class="section-card">
                 <h3>Today's Arrivals & Departures</h3>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div class="arrivals-grid">
                     <div>
-                        <h4 style="font-size:0.9rem;color:#2d2a24;font-weight:700;margin-bottom:10px;">
+                        <h4 class="arrivals-heading">
                             <i class="bi bi-box-arrow-in-right" style="color:#22c55e;margin-right:5px;"></i> Check-ins
                         </h4>
                         <div class="checkin-item">
@@ -216,7 +219,7 @@
                         </div>
                     </div>
                     <div>
-                        <h4 style="font-size:0.9rem;color:#2d2a24;font-weight:700;margin-bottom:10px;">
+                        <h4 class="arrivals-heading">
                             <i class="bi bi-box-arrow-right" style="color:#ef4444;margin-right:5px;"></i> Check-outs
                         </h4>
                         <div class="checkin-item">

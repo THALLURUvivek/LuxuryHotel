@@ -29,6 +29,36 @@ if (togglePassword && passwordField) {
 }
 
 // ==========================
+// SHOW / HIDE CONFIRM PASSWORD
+// ==========================
+
+const toggleConfirmPassword =
+    document.getElementById("toggleConfirmPassword");
+
+const confirmPasswordField =
+    document.getElementById("confirmPassword");
+
+if (toggleConfirmPassword && confirmPasswordField) {
+
+    toggleConfirmPassword.addEventListener("click", () => {
+
+        const type =
+            confirmPasswordField.type === "password"
+            ? "text"
+            : "password";
+
+        confirmPasswordField.type = type;
+
+        toggleConfirmPassword.innerHTML =
+            type === "password"
+            ? '<i class="bi bi-eye"></i>'
+            : '<i class="bi bi-eye-slash"></i>';
+
+    });
+
+}
+
+// ==========================
 // SIGNUP FORM
 // ==========================
 

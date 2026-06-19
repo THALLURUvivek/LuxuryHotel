@@ -137,6 +137,41 @@ if (toggleBtn && sidebar) {
         }
     );
 
+    // Sidebar close button (X)
+
+    const closeBtn =
+        document.getElementById("sidebarClose");
+
+    if (closeBtn) {
+
+        closeBtn.addEventListener(
+            "click",
+            () => {
+
+                sidebar.classList.remove(
+                    "open"
+                );
+
+                const icon =
+                    toggleBtn.querySelector("i");
+
+                if (icon) {
+
+                    icon.classList.add(
+                        "bi-list"
+                    );
+
+                    icon.classList.remove(
+                        "bi-x-lg"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
     document.addEventListener(
         "click",
         (e) => {

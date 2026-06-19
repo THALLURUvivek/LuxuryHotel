@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
 
 const revealElements =
     document.querySelectorAll(
-        ".info-card, .contact-form-wrapper, .reservation-card, .hours-card, .dept-card, .dept-image-wrapper, .dept-intro, .dept-stats"
+        ".info-card, .contact-form-wrapper, .reservation-card, .hours-card, .dept-card, .dept-image-wrapper, .dept-intro, .dept-stats, .testimonial-card, .testimonial-stats"
     );
 
 function revealOnScroll() {
@@ -191,6 +191,122 @@ function showSuccessMessage() {
         }, 500);
 
     }, 3000);
+
+}
+
+// ==========================
+// TESTIMONIAL CAROUSEL
+// ==========================
+
+const track =
+    document.getElementById("testimonialTrack");
+
+const dots =
+    document.querySelectorAll(".dot");
+
+const prevBtn =
+    document.getElementById("prevBtn");
+
+const nextBtn =
+    document.getElementById("nextBtn");
+
+let currentIndex = 0;
+const totalSlides =
+    document.querySelectorAll(".testimonial-card").length;
+
+function updateCarousel() {
+
+    track.style.transform =
+        "translateX(-" + (currentIndex * 100) + "%)";
+
+    dots.forEach((dot, i) => {
+
+        dot.classList.toggle(
+            "active",
+            i === currentIndex
+        );
+
+    });
+
+}
+
+if (nextBtn) {
+
+    nextBtn.addEventListener("click", () => {
+
+        currentIndex =
+            (currentIndex + 1) % totalSlides;
+
+        updateCarousel();
+
+    });
+
+}
+
+if (prevBtn) {
+
+    prevBtn.addEventListener("click", () => {
+
+        currentIndex =
+            (currentIndex - 1 + totalSlides) % totalSlides;
+
+        updateCarousel();
+
+    });
+
+}
+
+dots.forEach((dot) => {
+
+    dot.addEventListener("click", () => {
+
+        currentIndex =
+            parseInt(dot.dataset.index);
+
+        updateCarousel();
+
+    });
+
+});
+
+// Auto-rotate every 5 seconds
+
+let autoRotate =
+    setInterval(() => {
+
+        currentIndex =
+            (currentIndex + 1) % totalSlides;
+
+        updateCarousel();
+
+    }, 5000);
+
+const carousel =
+    document.getElementById("testimonialCarousel");
+
+if (carousel) {
+
+    carousel.addEventListener(
+        "mouseenter",
+        () => clearInterval(autoRotate)
+    );
+
+    carousel.addEventListener(
+        "mouseleave",
+        () => {
+
+            autoRotate =
+                setInterval(() => {
+
+                    currentIndex =
+                        (currentIndex + 1) % totalSlides;
+
+                    updateCarousel();
+
+                }, 5000);
+
+        }
+    );
 
 }
 
